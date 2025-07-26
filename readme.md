@@ -80,6 +80,9 @@
    ```
 
 ---
+## Warning:
+
+As I have used the LLM from Open Router, which provides free api keys. It might show limit error as the usage limit is present in free models in open router. :")
 
 ## 2. Folder Structure
 
