@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>RAG QA with Evaluation</title>
+</head>
+<body>
+    <h1>Ask a question</h1>
+    <form method="post" action="/ask">
+        <input type="text" name="query" placeholder="Type your question here" size="60" required />
+        <button type="submit">Ask</button>
+    </form>
+
+    {% if error %}
+        <p style="color:red;">Error: {{ error }}</p>
+    {% endif %}
+
+    {% if answer %}
+        <h2>Answer:</h2>
+        <p>{{ answer }}</p>
+
+        <h3>Evaluation Scores:</h3>
+        <ul>
+            <li>Average Relevance Similarity: {{ relevance_avg }}</li>
+            <li>Max Relevance Similarity: {{ relevance_max }}</li>
+            <li>Groundedness Score: {{ groundedness }}</li>
+        </ul>
+    {% endif %}
+</body>
+</html>
