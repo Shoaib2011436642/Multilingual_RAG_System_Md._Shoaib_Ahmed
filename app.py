@@ -16,7 +16,7 @@ embedding_model = HuggingFaceEmbeddings(
 )
 
 vectorstore = FAISS.load_local(
-    "E:/RAG_Final_Shoaib/bangla_vector_db",
+    "Your specified Directory/bangla_vector_db",
     embeddings=embedding_model,
     allow_dangerous_deserialization=True
 )
@@ -28,7 +28,7 @@ from langchain_openai import ChatOpenAI
 import os
 
 # Set Mistral API key
-os.environ["MISTRAL_API_KEY"] = "FbLAJBFsSnqIjydjm3W2DHfsdzpVJq14"
+os.environ["MISTRAL_API_KEY"] = "Put You Generated API Key from Mistral AI"
 
 llm = ChatMistralAI(
     mistral_api_key=os.environ["MISTRAL_API_KEY"],
