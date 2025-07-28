@@ -40,7 +40,7 @@
 
 5. **Update FAISS vector store path in **``**:**
 
-   Locate this line (around line 17):
+   Locate this line (around line 19):
 
    ```python
    vectorstore = FAISS.load_local(
